@@ -1,29 +1,24 @@
 # melt
 
-> Backup and restore terminal sessions.
-> A Charm tool for managing terminal session backups.
+> Generate seed phrases from SSH keys for backup and recovery.
 > More information: <https://github.com/charmbracelet/melt>.
 
-- Backup the current terminal session:
+- Generate a seed phrase from an SSH key:
 
-`melt backup`
+`melt {{path/to/ssh_key}}`
 
-- Restore a terminal session from a backup:
+- Generate a seed phrase and save to file:
 
-`melt restore {{backup_file}}`
+`melt {{path/to/ssh_key}} > {{seed_file}}`
 
-- List all available backups:
+- Restore an SSH key from a seed phrase:
 
-`melt list`
+`melt restore --seed "{{seed_phrase}}" {{path/to/output_key}}`
 
-- Delete a specific backup:
+- Restore an SSH key from a seed file:
 
-`melt delete {{backup_file}}`
+`melt restore {{path/to/output_key}} < {{seed_file}}`
 
-- Display version information:
+- Generate seed phrase in a specific language:
 
-`melt --version`
-
-- Display help:
-
-`melt --help`
+`melt --language {{language}} {{path/to/ssh_key}}`

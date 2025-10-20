@@ -1,20 +1,20 @@
 # sequin
 
-> Generate beautiful sequences and patterns in the terminal.
-> A Charm tool for creating visual sequences.
+> Human-readable ANSI sequence analyzer.
+> Displays ANSI escape sequences in a readable format.
 > More information: <https://github.com/charmbracelet/sequin>.
 
-- Generate a default sequence pattern:
+- Analyze ANSI sequences from stdin:
 
-`sequin`
+`printf '\x1b[m' | sequin`
 
-- Generate a sequence with a specific pattern:
+- Analyze ANSI sequences from a file:
 
-`sequin --pattern {{pattern_name}}`
+`sequin < {{file}}`
 
-- Generate a sequence with custom colors:
+- Analyze ANSI sequences from a command:
 
-`sequin --colors {{color1,color2,color3}}`
+`sequin -- {{command}}`
 
 - Display version information:
 

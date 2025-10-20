@@ -1,28 +1,24 @@
 # wishlist
 
-> Manage SSH access and create SSH applications.
-> A Charm tool for building SSH-based applications and managing SSH keys.
+> SSH directory with TUI for managing SSH configurations.
+> Provides a terminal user interface for SSH config files.
 > More information: <https://github.com/charmbracelet/wishlist>.
 
-- Start the wishlist SSH server:
+- Start the wishlist TUI with default config:
+
+`wishlist`
+
+- Start with a specific config file:
+
+`wishlist --config {{path/to/config}}`
+
+- Serve the TUI over SSH:
 
 `wishlist serve`
 
-- Start the server on a specific port:
+- Enable zeroconf service discovery:
 
-`wishlist serve --port {{port}}`
-
-- Add a new SSH key:
-
-`wishlist add-key {{path/to/public_key}}`
-
-- List all authorized keys:
-
-`wishlist list-keys`
-
-- Remove an SSH key:
-
-`wishlist remove-key {{key_id}}`
+`wishlist --zeroconf.enabled`
 
 - Display version information:
 

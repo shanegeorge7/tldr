@@ -1,21 +1,20 @@
 # confettysh
 
-> Generate confetti in the terminal.
-> A Charm tool that displays colorful confetti animations in your terminal.
+> A web server that serves confetti animations.
 > More information: <https://github.com/charmbracelet/confettysh>.
 
-- Display confetti in the terminal:
+- Start the confetti server on default port:
 
 `confettysh`
 
-- Display confetti with a custom message:
+- Start the server on a specific port:
 
-`confettysh "{{message}}"`
+`confettysh --port {{port}}`
 
-- Display version information:
+- Start the server on a specific address:
 
-`confettysh --version`
+`confettysh --listen {{address}}`
 
-- Display help:
+- Start the server with custom metrics port:
 
-`confettysh --help`
+`confettysh --metrics-port {{port}}`
